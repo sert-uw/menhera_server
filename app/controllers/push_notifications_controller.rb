@@ -5,13 +5,18 @@ class PushNotificationsController < ApplicationController
       return
     end
 
-    device = Device.new(device_type: params[:device_type], device_token: params[:device_token])
+    device = Device.find_by(device_token: params[:device_token])
 
-    if device.save
-      render status: 200, json: { 'id': device.id }
-    else
-      render status: 422, json: { 'message': 'registration is failure' }
+    unless device.present?
+      device = Device.new(device_type: params[:device_type], device_token: params[:device_token])
+
+      unless device.save
+        render status: 422, json: { 'message': 'registration is failure' }
+        return
+      end
     end
+
+    render status: 200, json: { 'id': device.id }
   end
 
   private
@@ -22,5 +27,8 @@ class PushNotificationsController < ApplicationController
     else
       true
     end
+  end
+
+  def set_device
   end
 end
