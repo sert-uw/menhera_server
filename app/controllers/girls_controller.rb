@@ -1,5 +1,5 @@
 class GirlsController < ActionController::Base
   def index
-    @girls = Girls.all
+    @girls = Girl.all
   end
 end
