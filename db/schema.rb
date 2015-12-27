@@ -11,13 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151227195729) do
+ActiveRecord::Schema.define(version: 20151227203349) do
 
   create_table "devices", force: :cascade do |t|
     t.string   "device_token", limit: 255
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
     t.string   "device_type",  limit: 255
+  end
+
+  create_table "girls", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.boolean  "is_couple"
+    t.integer  "spirit",     limit: 4
+    t.integer  "dependent",  limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "rpush_apps", force: :cascade do |t|
