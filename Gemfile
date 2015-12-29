@@ -18,6 +18,9 @@ gem 'rpush', '~> 2.5.0'
 
 gem 'seed-fu', '~> 2.3.4'
 
+gem 'ruby-graphviz', '~> 1.2.2'
+gem 'rails-erd', '~> 1.4.4'
+
 group :development, :test do
   gem 'byebug'
 end
