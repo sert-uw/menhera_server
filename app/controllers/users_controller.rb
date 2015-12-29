@@ -8,9 +8,6 @@ class UsersController < BaseController
     end
 
     user = User.create(name: params[:name], uuid: params[:uuid])
-    token = SecureRandom.hex(16)
-    user.token = token
-    user.save
-    render status: 200, json: { token: token }
+    render status: 200, json: { token: user.token }
   end
 end
