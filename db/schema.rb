@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151229104713) do
+ActiveRecord::Schema.define(version: 20151229110208) do
 
   create_table "devices", force: :cascade do |t|
     t.string   "device_token", limit: 255
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 20151229104713) do
     t.string   "text",       limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+    t.integer  "girl_id",    limit: 4
   end
 
   create_table "rpush_apps", force: :cascade do |t|
