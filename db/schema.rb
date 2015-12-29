@@ -91,10 +91,10 @@ ActiveRecord::Schema.define(version: 20151229083029) do
   create_table "user_girls", force: :cascade do |t|
     t.integer  "user_id",    limit: 4
     t.integer  "girl_id",    limit: 4
-    t.boolean  "is_couple"
-    t.integer  "dependence", limit: 4
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.boolean  "is_couple",            default: false
+    t.integer  "dependence", limit: 4, default: 0
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
   end
 
   create_table "users", force: :cascade do |t|
