@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151229081959) do
+ActiveRecord::Schema.define(version: 20151229083029) do
 
   create_table "devices", force: :cascade do |t|
     t.string   "device_token", limit: 255
@@ -87,6 +87,15 @@ ActiveRecord::Schema.define(version: 20151229081959) do
 
   add_index "rpush_notifications", ["app_id", "delivered", "failed", "deliver_after"], name: "index_rapns_notifications_multi", using: :btree
   add_index "rpush_notifications", ["delivered", "failed"], name: "index_rpush_notifications_multi", using: :btree
+
+  create_table "user_girls", force: :cascade do |t|
+    t.integer  "user_id",    limit: 4
+    t.integer  "girl_id",    limit: 4
+    t.boolean  "is_couple"
+    t.integer  "dependence", limit: 4
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "name",       limit: 255
