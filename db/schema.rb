@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151229155801) do
+ActiveRecord::Schema.define(version: 20151229161752) do
 
   create_table "devices", force: :cascade do |t|
     t.string   "device_token", limit: 255
@@ -45,13 +45,14 @@ ActiveRecord::Schema.define(version: 20151229155801) do
   end
 
   create_table "messages", force: :cascade do |t|
-    t.string   "from",            limit: 255
-    t.boolean  "read",                        default: false
-    t.integer  "user_id",         limit: 4
-    t.integer  "girl_id",         limit: 4
-    t.datetime "created_at",                                  null: false
-    t.datetime "updated_at",                                  null: false
-    t.integer  "message_list_id", limit: 4
+    t.string   "from",                  limit: 255
+    t.boolean  "read",                              default: false
+    t.integer  "user_id",               limit: 4
+    t.integer  "girl_id",               limit: 4
+    t.datetime "created_at",                                        null: false
+    t.datetime "updated_at",                                        null: false
+    t.integer  "message_list_id",       limit: 4
+    t.integer  "response_candidate_id", limit: 4
   end
 
   create_table "response_candidates", force: :cascade do |t|
