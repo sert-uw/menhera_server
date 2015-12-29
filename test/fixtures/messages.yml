@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  from: MyString
+  read: false
+  text: MyString
+  user_id: 1
+  girl_id: 1
+
+two:
+  from: MyString
+  read: false
+  text: MyString
+  user_id: 1
+  girl_id: 1
