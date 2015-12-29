@@ -21,6 +21,8 @@ gem 'seed-fu', '~> 2.3.4'
 gem 'ruby-graphviz', '~> 1.2.2'
 gem 'rails-erd', '~> 1.4.4'
 
+gem 'draper', '~> 1.3.0'
+
 group :development, :test do
   gem 'byebug'
 end
