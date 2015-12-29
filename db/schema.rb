@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151229080631) do
+ActiveRecord::Schema.define(version: 20151229081959) do
 
   create_table "devices", force: :cascade do |t|
     t.string   "device_token", limit: 255
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
     t.string   "device_type",  limit: 255
+    t.integer  "user_id",      limit: 4
   end
 
   create_table "girls", force: :cascade do |t|
