@@ -28,22 +28,6 @@ ActiveRecord::Schema.define(version: 20151229133639) do
     t.datetime "updated_at",             null: false
   end
 
-  create_table "message_from_girls", force: :cascade do |t|
-    t.integer  "user_id",    limit: 4
-    t.integer  "girl_id",    limit: 4
-    t.string   "text",       limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-  end
-
-  create_table "message_from_users", force: :cascade do |t|
-    t.integer  "user_id",    limit: 4
-    t.integer  "girl_id",    limit: 4
-    t.string   "text",       limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-  end
-
   create_table "message_list_response_candidates", force: :cascade do |t|
     t.integer  "dependence_point",      limit: 4
     t.integer  "message_list_id",       limit: 4
@@ -61,12 +45,12 @@ ActiveRecord::Schema.define(version: 20151229133639) do
 
   create_table "messages", force: :cascade do |t|
     t.string   "from",       limit: 255
-    t.boolean  "read"
+    t.boolean  "read",                   default: false
     t.string   "text",       limit: 255
     t.integer  "user_id",    limit: 4
     t.integer  "girl_id",    limit: 4
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
   end
 
   create_table "response_candidates", force: :cascade do |t|
