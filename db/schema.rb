@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151229133639) do
+ActiveRecord::Schema.define(version: 20151229154412) do
 
   create_table "devices", force: :cascade do |t|
     t.string   "device_token", limit: 255
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20151229133639) do
     t.integer  "response_candidate_id", limit: 4
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false
+    t.integer  "next_message_id",       limit: 4
   end
 
   create_table "message_lists", force: :cascade do |t|
