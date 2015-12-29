@@ -4,8 +4,6 @@ Rails.application.routes.draw do
   resources 'users', only: [:create], defaults: { format: :json }
 
   resources 'girls', only: [:index], defaults: { format: :json } do
-    resources 'messages'
+    resources 'response_candidates', only: [:index], defaults: { format: :json }
   end
-
-  resources 'response_candidates', only: [:index], defaults: { format: :json }
 end

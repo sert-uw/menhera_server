@@ -1,0 +1,2 @@
+class ResponseCandidatesController < ApplicationController
+end
