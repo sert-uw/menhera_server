@@ -1,4 +1,4 @@
-class UsersController < ActionController::Base
+class UsersController < BaseController
   def create
     user = User.find_by uuid: params[:uuid]
 
