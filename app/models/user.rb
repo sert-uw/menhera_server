@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
   has_many :user_girls
   has_many :girls, through: :user_girls
 
+  has_many :messages
+
   private
 
     def set_token
