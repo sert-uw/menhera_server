@@ -23,6 +23,8 @@ gem 'rails-erd', '~> 1.4.4'
 
 gem 'draper', '~> 1.3.0'
 
+gem 'devise'
+
 group :development, :test do
   gem 'byebug'
 end
