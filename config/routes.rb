@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   namespace :admin_tools do
     resources :tops, only: [:index]
+    resources :users, only: [:index]
   end
 
   resources :post_notifications, only: [:create], defaults: { format: :json }
