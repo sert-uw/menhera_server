@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :admin_users
+
   resources :post_notifications, only: [:create], defaults: { format: :json }
 
   resources 'users', only: [:create], defaults: { format: :json }
