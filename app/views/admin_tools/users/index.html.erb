@@ -1,0 +1,25 @@
+<h1>ユーザ一覧</h1>
+
+<table table="table">
+  <thead>
+    <tr>
+      <td>ユーザID</td>
+      <td>ユーザ名</td>
+      <td>UUID</td>
+      <td>デバイスタイプ</td>
+      <td>デバイストークン</td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.id %></td>
+        <td><%= user.name %></td>
+        <td><%= user.uuid %></td>
+        <td><%= user.device.device_type %></td>
+        <td><%= user.device.device_token %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
