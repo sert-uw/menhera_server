@@ -25,6 +25,8 @@ gem 'draper', '~> 1.3.0'
 
 gem 'devise'
 
+gem 'simple_form'
+
 group :development, :test do
   gem 'byebug'
 end
