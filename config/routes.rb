@@ -7,7 +7,8 @@ Rails.application.routes.draw do
     resources :tops, only: [:index]
     resources :users, only: [:index]
     resources :girls, only: [:index, :show]  do
-      resources :message_lists, only: [:index, :new, :edit, :create, :update, :destroy]
+      resources :message_lists
+      resources :response_candidates
     end
   end
 

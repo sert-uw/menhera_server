@@ -1,0 +1,33 @@
+<h1>メッセージの関連性</h1>
+
+<p>
+  <strong>テキスト</strong>:<%= @message_list.text %>
+</p>
+
+<h2>会話フロー</h2>
+
+<table table="table">
+  <thead>
+    <tr>
+      <td>返信テキスト</td>
+      <td>依存度ポイント</td>
+      <td>次のメッセージID</td>
+      <td>次のメッセージテキスト</td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @message_response.each do |mr| %>
+      <tr>
+        <td><%= mr.response_candidate.text %></td>
+        <td><%= mr.dependence_point %></td>
+        <td><%= mr.next_message_id %></td>
+        <td><%= mr.next_message.text %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<p>
+  <%= link_to '戻る', admin_tools_girl_message_lists_path(@girl) %>
+</p>

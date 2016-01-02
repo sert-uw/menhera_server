@@ -1,9 +1,14 @@
 class AdminTools::MessageListsController < ApplicationController
   before_action :authenticate_admin_user!
   before_action :set_girl
+  before_action :set_message_list, only: [:show, :edit]
 
   def index
     @message_lists = @girl.message_lists
+  end
+
+  def show
+    @message_response = MessageListResponseCandidateDecorator.decorate_collection(@message_list.message_list_response_candidates.includes(:response_candidate))
   end
 
   def new
@@ -11,7 +16,6 @@ class AdminTools::MessageListsController < ApplicationController
   end
 
   def edit
-    @message_list = @girl.message_lists.find params[:id]
   end
 
   def create
@@ -44,6 +48,10 @@ class AdminTools::MessageListsController < ApplicationController
 
   def set_girl
     @girl = Girl.find params[:girl_id]
+  end
+
+  def set_message_list
+    @message_list = @girl.message_lists.find params[:id]
   end
 
   def message_list_params

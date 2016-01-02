@@ -1,0 +1,35 @@
+<h1>返信候補リスト</h1>
+
+<p>
+  <strong>名前</strong>:<%= @girl.name %>
+
+<p>
+  <%= link_to '新規作成', new_admin_tools_girl_response_candidate_path(@girl) %>
+</p>
+
+<table table="table">
+  <thead>
+    <tr>
+      <td>ID</td>
+      <td>簡略テキスト</td>
+      <td>テキスト</td>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @response_candidates.each do |rc| %>
+      <tr>
+        <td><%= rc.id %></td>
+        <td><%= rc.short_text %></td>
+        <td><%= rc.text %></td>
+        <td><%= link_to '編集', edit_admin_tools_girl_response_candidate_path(@girl, rc) %></td>
+        <td><%= link_to '削除', admin_tools_girl_response_candidate_path(@girl, rc), method: :delete, data: { confirm: '削除しますか?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<p>
+  <%= link_to '戻る', admin_tools_girl_path(@girl) %>
+</p>

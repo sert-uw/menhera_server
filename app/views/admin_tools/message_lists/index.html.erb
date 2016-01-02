@@ -12,7 +12,7 @@
     <tr>
       <td>ID</td>
       <td>テキスト</td>
-      <th colspan="2"></th>
+      <th colspan="3"></th>
     </tr>
   </thead>
 
@@ -21,6 +21,7 @@
       <tr>
         <td><%= message_list.id %></td>
         <td><%= message_list.text %></td>
+        <td><%= link_to '会話フロー', admin_tools_girl_message_list_path(@girl, message_list) %></td>
         <td><%= link_to '編集', edit_admin_tools_girl_message_list_path(@girl, message_list) %></td>
         <td><%= link_to '削除', admin_tools_girl_message_list_path(@girl, message_list), method: :delete, data: { confirm: '削除しますか?' } %></td>
       </tr>
