@@ -1,0 +1,21 @@
+<h1>女の子一覧</h1>
+
+<table table="table">
+  <thead>
+    <tr>
+      <td>ID</td>
+      <td>名前</td>
+      <td>精神状態</td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @girls.each do |girl| %>
+      <tr>
+        <td><%= girl.id %></td>
+        <td><%= girl.name %></td>
+        <td><%= girl.spirit %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
