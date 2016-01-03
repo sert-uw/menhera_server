@@ -26,6 +26,6 @@ class AdminTools::MessageListResponseCandidatesController < ApplicationControlle
   end
 
   def message_candidate_params
-    params.require(:message_list_response_candidate).permit(:dependence_point, :next_message_id)
+    params.require(:message_list_response_candidate).permit(:dependence_point, :spirit_point, :next_message_id)
   end
 end

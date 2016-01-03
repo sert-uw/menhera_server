@@ -3,6 +3,7 @@ MessageListResponseCandidate.seed do |mr|
   mr.message_list_id = 1
   mr.response_candidate_id = 1
   mr.dependence_point = 5
+  mr.spirit_point = 5
   mr.next_message_id = 3
 end
 
@@ -11,6 +12,7 @@ MessageListResponseCandidate.seed do |mr|
   mr.message_list_id = 1
   mr.response_candidate_id = 2
   mr.dependence_point = 10
+  mr.spirit_point = 10
   mr.next_message_id = 4
 end
 
@@ -19,6 +21,7 @@ MessageListResponseCandidate.seed do |mr|
   mr.message_list_id = 1
   mr.response_candidate_id = 3
   mr.dependence_point = -5
+  mr.spirit_point = -5
   mr.next_message_id = 5
 end
 
@@ -27,6 +30,7 @@ MessageListResponseCandidate.seed do |mr|
   mr.message_list_id = 2
   mr.response_candidate_id = 1
   mr.dependence_point = 3
+  mr.spirit_point = 3
   mr.next_message_id = 1
 end
 
@@ -35,6 +39,7 @@ MessageListResponseCandidate.seed do |mr|
   mr.message_list_id = 2
   mr.response_candidate_id = 2
   mr.dependence_point = 8
+  mr.spirit_point = 8
   mr.next_message_id = 4
 end
 
@@ -43,6 +48,7 @@ MessageListResponseCandidate.seed do |mr|
   mr.message_list_id = 2
   mr.response_candidate_id = 3
   mr.dependence_point = -5
+  mr.spirit_point = -5
   mr.next_message_id = 3
 end
 
@@ -51,6 +57,7 @@ MessageListResponseCandidate.seed do |mr|
   mr.message_list_id = 3
   mr.response_candidate_id = 1
   mr.dependence_point = -5
+  mr.spirit_point = -5
   mr.next_message_id = 1
 end
 
@@ -59,6 +66,7 @@ MessageListResponseCandidate.seed do |mr|
   mr.message_list_id = 3
   mr.response_candidate_id = 2
   mr.dependence_point = 5
+  mr.spirit_point = 5
   mr.next_message_id = 4
 end
 
@@ -67,6 +75,7 @@ MessageListResponseCandidate.seed do |mr|
   mr.message_list_id = 3
   mr.response_candidate_id = 3
   mr.dependence_point = -10
+  mr.spirit_point = -10
   mr.next_message_id = 5
 end
 
@@ -75,6 +84,7 @@ MessageListResponseCandidate.seed do |mr|
   mr.message_list_id = 4
   mr.response_candidate_id = 1
   mr.dependence_point = -5
+  mr.spirit_point = -5
   mr.next_message_id = 5
 end
 
@@ -83,6 +93,7 @@ MessageListResponseCandidate.seed do |mr|
   mr.message_list_id = 4
   mr.response_candidate_id = 2
   mr.dependence_point = 10
+  mr.spirit_point = 10
   mr.next_message_id = 2
 end
 
@@ -91,6 +102,7 @@ MessageListResponseCandidate.seed do |mr|
   mr.message_list_id = 4
   mr.response_candidate_id = 3
   mr.dependence_point = -10
+  mr.spirit_point = -10
   mr.next_message_id = 5
 end
 
@@ -99,6 +111,7 @@ MessageListResponseCandidate.seed do |mr|
   mr.message_list_id = 5
   mr.response_candidate_id = 1
   mr.dependence_point = -10
+  mr.spirit_point = -10
   mr.next_message_id = 3
 end
 
@@ -107,6 +120,7 @@ MessageListResponseCandidate.seed do |mr|
   mr.message_list_id = 5
   mr.response_candidate_id = 2
   mr.dependence_point = 5
+  mr.spirit_point = 5
   mr.next_message_id = 2
 end
 
@@ -115,5 +129,6 @@ MessageListResponseCandidate.seed do |mr|
   mr.message_list_id = 5
   mr.response_candidate_id = 3
   mr.dependence_point = -20
+  mr.spirit_point = -20
   mr.next_message_id = 3
 end

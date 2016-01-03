@@ -11,6 +11,7 @@
     <tr>
       <td>返信テキスト</td>
       <td>依存度ポイント</td>
+      <td>精神状態ポイント</td>
       <td>次のメッセージID</td>
       <td>次のメッセージテキスト</td>
       <th colspan="1"></th>
@@ -22,6 +23,7 @@
       <tr>
         <td><%= mr.response_candidate.text %></td>
         <td><%= mr.dependence_point %></td>
+        <td><%= mr.spirit_point %></td>
         <td><%= mr.next_message_id %></td>
         <td><%= mr.next_message.text %></td>
         <td><%= link_to '編集', edit_admin_tools_girl_message_list_response_candidate_path(@girl, mr, from: 'message_list') %></td>
