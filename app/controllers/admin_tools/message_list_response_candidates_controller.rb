@@ -7,10 +7,14 @@ class AdminTools::MessageListResponseCandidatesController < ApplicationControlle
   end
 
   def update
-    if @message_candidate.update message_candidate_params
-      redirect_to admin_tools_girl_message_list_path(params[:girl_id], @message_candidate.message_list_id)
-    else
+    unless @message_candidate.update message_candidate_params
       render :edit
+    end
+
+    if params[:from] == 'message_list'
+      redirect_to admin_tools_girl_message_list_path(params[:girl_id], @message_candidate.message_list_id)
+    elsif params[:from] == 'response_candidate'
+      redirect_to admin_tools_girl_response_candidate_path(params[:girl_id], @message_candidate.response_candidate_id)
     end
   end
 

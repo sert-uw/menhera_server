@@ -1,9 +1,14 @@
 class AdminTools::ResponseCandidatesController < ApplicationController
   before_action :authenticate_admin_user!
   before_action :set_girl
+  before_action :set_response_candidate, only: [:show, :edit]
 
   def index
     @response_candidates = @girl.response_candidates
+  end
+
+  def show
+    @message_responses = AdminTools::MessageListResponseCandidateDecorator.decorate_collection(@response_candidate.message_list_response_candidates.includes(:message_list))
   end
 
   def new
@@ -11,7 +16,6 @@ class AdminTools::ResponseCandidatesController < ApplicationController
   end
 
   def edit
-    @response_candidate = @girl.response_candidates.find params[:id]
   end
 
   def create
@@ -44,6 +48,10 @@ class AdminTools::ResponseCandidatesController < ApplicationController
 
   def set_girl
     @girl = Girl.find params[:girl_id]
+  end
+
+  def set_response_candidate
+    @response_candidate = @girl.response_candidates.find params[:id]
   end
 
   def response_candidate_params
