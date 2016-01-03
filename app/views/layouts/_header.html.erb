@@ -10,6 +10,7 @@
           <% if admin_user_signed_in? %>
             <li><%= link_to 'ユーザ一覧', admin_tools_users_path, class: 'navbar-link' %></li>
             <li><%= link_to '女の子一覧', admin_tools_girls_path, class: 'navbar-link' %></li>
+            <li><%= link_to 'ER図', '/erd.pdf', class: 'navbar-link' %></li>
           <% else %>
             <li><%= link_to 'ログイン', new_admin_user_session_path, class: 'navbar-link' %></li>
           <% end %>
