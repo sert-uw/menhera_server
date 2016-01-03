@@ -3,7 +3,7 @@
 <%= simple_form_for @response_candidate, url: admin_tools_girl_response_candidates_path(@girl) do |f| %>
   <%= f.input :short_text, label: '簡易テキスト', as: :string %>
   <%= f.input :text, label: 'テキスト', as: :string %>
-  <%= f.button :submit %>
+  <%= f.button :submit, '作成' %>
 <% end %>
 
 <%= link_to '戻る', admin_tools_girl_response_candidates_path(@girl) %>
