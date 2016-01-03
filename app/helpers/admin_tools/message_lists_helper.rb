@@ -1,0 +1,2 @@
+module AdminTools::MessageListsHelper
+end

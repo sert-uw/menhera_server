@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160101142216) do
+ActiveRecord::Schema.define(version: 20160103160307) do
 
   create_table "admin_users", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false
@@ -47,12 +47,13 @@ ActiveRecord::Schema.define(version: 20160101142216) do
   end
 
   create_table "message_list_response_candidates", force: :cascade do |t|
-    t.integer  "dependence_point",      limit: 4
+    t.integer  "dependence_point",      limit: 4, default: 0
     t.integer  "message_list_id",       limit: 4
     t.integer  "response_candidate_id", limit: 4
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
-    t.integer  "next_message_id",       limit: 4
+    t.datetime "created_at",                                  null: false
+    t.datetime "updated_at",                                  null: false
+    t.integer  "next_message_id",       limit: 4, default: 1
+    t.integer  "spirit_point",          limit: 4
   end
 
   create_table "message_lists", force: :cascade do |t|

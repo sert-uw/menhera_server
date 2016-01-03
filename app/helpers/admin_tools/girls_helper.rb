@@ -1,0 +1,2 @@
+module AdminTools::GirlsHelper
+end

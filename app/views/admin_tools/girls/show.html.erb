@@ -1,0 +1,21 @@
+<h1>女の子詳細</h1>
+
+<p>
+  <strong>名前</strong>:<%= @girl.name %>
+</p>
+
+<p>
+  <strong>精神状態</strong>:<%= @girl.spirit %>
+</p>
+
+<p>
+  <%= link_to 'メッセージリスト', admin_tools_girl_message_lists_path(@girl) %>
+</p>
+
+<p>
+  <%= link_to '返信候補リスト', admin_tools_girl_response_candidates_path(@girl) %>
+</p>
+
+<p>
+  <%= link_to '戻る', admin_tools_girls_path %>
+</p>

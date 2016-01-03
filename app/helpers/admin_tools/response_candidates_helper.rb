@@ -1,0 +1,2 @@
+module AdminTools::ResponseCandidatesHelper
+end

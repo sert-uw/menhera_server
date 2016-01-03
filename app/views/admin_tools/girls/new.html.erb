@@ -1,0 +1,9 @@
+<h1>女の子作成</h1>
+
+<%= simple_form_for @girl, url: admin_tools_girls_path do |f| %>
+  <%= f.input :name, label: '名前', as: :string %>
+  <%= f.input :spirit, label: '精神状態', as: :integer %>
+  <%= f.button :submit, 'OK' %>
+<% end %>
+
+<%= link_to '戻る', admin_tools_girls_path %>

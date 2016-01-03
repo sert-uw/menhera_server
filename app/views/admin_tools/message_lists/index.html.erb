@@ -1,0 +1,34 @@
+<h1>メッセージリスト</h1>
+
+<p>
+  <strong>名前</strong>:<%= @girl.name %>
+
+<p>
+  <%= link_to '新規作成', new_admin_tools_girl_message_list_path(@girl) %>
+</p>
+
+<table table="table">
+  <thead>
+    <tr>
+      <td>ID</td>
+      <td>テキスト</td>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @message_lists.each do |message_list| %>
+      <tr>
+        <td><%= message_list.id %></td>
+        <td><%= message_list.text %></td>
+        <td><%= link_to '会話フロー', admin_tools_girl_message_list_path(@girl, message_list) %></td>
+        <td><%= link_to '編集', edit_admin_tools_girl_message_list_path(@girl, message_list) %></td>
+        <td><%= link_to '削除', admin_tools_girl_message_list_path(@girl, message_list), method: :delete, data: { confirm: '削除しますか?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<p>
+  <%= link_to '戻る', admin_tools_girl_path(@girl) %>
+</p>

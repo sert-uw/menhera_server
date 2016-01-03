@@ -1,0 +1,2 @@
+module AdminTools::MessageListResponseCandidatesHelper
+end

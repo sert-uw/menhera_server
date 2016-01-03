@@ -6,6 +6,11 @@ Rails.application.routes.draw do
   namespace :admin_tools do
     resources :tops, only: [:index]
     resources :users, only: [:index]
+    resources :girls do
+      resources :message_lists
+      resources :response_candidates
+      resources :message_list_response_candidates, only: [:edit, :update]
+    end
   end
 
   resources :post_notifications, only: [:create], defaults: { format: :json }
