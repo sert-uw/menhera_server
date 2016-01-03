@@ -27,6 +27,8 @@ gem 'devise'
 
 gem 'simple_form'
 
+gem "bower-rails"
+
 group :development, :test do
   gem 'byebug'
 end

@@ -19,3 +19,4 @@
 .env
 
 *.swp
+/vendor/assets/bower_components
