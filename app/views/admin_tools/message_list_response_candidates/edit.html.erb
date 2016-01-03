@@ -1,0 +1,9 @@
+<h1>メッセージの関連性編集</h1>
+
+<%= simple_form_for @message_candidate, url: admin_tools_girl_message_list_response_candidate_path(@girl, @message_candidate) do |f| %>
+  <%= f.input :dependence_point, label: '依存ポイント', as: :integer %>
+  <%= f.input :next_message_id, collection: @next_messages, label: '次のメッセージテキスト', label_method: :text, value_method: :id %>
+  <%= f.button :submit %>
+<% end %>
+
+<%= link_to '戻る', admin_tools_girl_message_list_path(@girl, @message_candidate.message_list_id) %>

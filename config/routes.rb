@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :girls, only: [:index, :show]  do
       resources :message_lists
       resources :response_candidates
+      resources :message_list_response_candidates, only: [:edit, :update]
     end
   end
 

@@ -13,6 +13,7 @@
       <td>依存度ポイント</td>
       <td>次のメッセージID</td>
       <td>次のメッセージテキスト</td>
+      <th colspan="1"></th>
     </tr>
   </thead>
 
@@ -23,6 +24,7 @@
         <td><%= mr.dependence_point %></td>
         <td><%= mr.next_message_id %></td>
         <td><%= mr.next_message.text %></td>
+        <td><%= link_to '編集', edit_admin_tools_girl_message_list_response_candidate_path(@girl, mr) %></td>
       </tr>
     <% end %>
   </tbody>

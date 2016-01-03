@@ -1,4 +1,4 @@
-class MessageListResponseCandidateDecorator < Draper::Decorator
+class AdminTools::MessageListResponseCandidateDecorator < Draper::Decorator
   delegate_all
 
   def next_message

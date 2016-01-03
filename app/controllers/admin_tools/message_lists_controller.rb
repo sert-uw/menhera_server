@@ -8,7 +8,7 @@ class AdminTools::MessageListsController < ApplicationController
   end
 
   def show
-    @message_response = MessageListResponseCandidateDecorator.decorate_collection(@message_list.message_list_response_candidates.includes(:response_candidate))
+    @message_response = AdminTools::MessageListResponseCandidateDecorator.decorate_collection(@message_list.message_list_response_candidates.includes(:response_candidate))
   end
 
   def new
