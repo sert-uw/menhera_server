@@ -9,15 +9,6 @@ class MessagesController < BaseController
   def create
     @user_girl.messages.create(from: Message::FROM[:user], response_candidate_id: params[:candidate_id])
 
-    last_message = Message.where(from: Message::FROM[:girl]).last
-
-    message_candidate = MessageListResponseCandidate.find_by(message_list_id: last_message.message_list_id, response_candidate_id: params[:candidate_id])
-
-    user_girl = current_user.user_girls.find(params[:girl_id])
-    user_girl.dependence += message_candidate.dependence_point
-
-    @user_girl.messages.create(from: Message::FROM[:girl], message_list_id: message_candidate.next_message_id)
-
     render status: 200, json: {}
   end
 
