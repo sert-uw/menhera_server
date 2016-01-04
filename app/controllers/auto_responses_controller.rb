@@ -12,7 +12,6 @@ class AutoResponsesController < BaseController
 
       last_message = user_girl.messages.where(from: Message::FROM[:girl]).last
 
-      binding.pry
       message_candidate = MessageListResponseCandidate.find_by(message_list_id: last_message.message_list_id, response_candidate_id: last_response.response_candidate_id)
 
       user_girl.dependence += message_candidate.dependence_point
@@ -20,7 +19,8 @@ class AutoResponsesController < BaseController
 
       user_girl.messages.create(from: Message::FROM[:girl], message_list_id: message_candidate.next_message_id)
 
-      render status: 200, json: {}
     end
+
+    render status: 200, json: {}
   end
 end
