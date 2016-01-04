@@ -12,22 +12,17 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-
 gem 'dotenv-rails', '~> 2.0.2'
 gem 'rpush', '~> 2.5.0'
-
 gem 'seed-fu', '~> 2.3.4'
-
 gem 'ruby-graphviz', '~> 1.2.2'
 gem 'rails-erd', '~> 1.4.4'
-
 gem 'draper', '~> 1.3.0'
-
 gem 'devise'
-
 gem 'simple_form'
-
-gem "bower-rails"
+gem 'bower-rails'
+gem 'unicorn'
+gem 'unicorn-worker-killer'
 
 group :development, :test do
   gem 'byebug'
