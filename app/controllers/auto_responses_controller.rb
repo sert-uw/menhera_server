@@ -20,8 +20,13 @@ class AutoResponsesController < BaseController
       girl.spirit += message_candidate.spirit_point
       girl.save
 
-      user_girl.messages.create(from: Message::FROM[:girl], message_list_id: message_candidate.next_message_id)
+      new_message = user_girl.messages.create(from: Message::FROM[:girl], message_list_id: message_candidate.next_message_id)
 
+      notif = Rpush::Gcm::Notification.new
+      notif.app = Rpush::Gcm::App.find_by_name("push_sample_android")
+      notif.registration_ids = user.device.device_token
+      notif.data = JSON.parse("{ \"title\": \"#{girl.name}\", \"message\": \"#{new_message.text}\" }")
+      notif.save!
     end
 
     render status: 200, json: {}
