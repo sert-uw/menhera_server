@@ -132,3 +132,30 @@ MessageListResponseCandidate.seed do |mr|
   mr.spirit_point = -20
   mr.next_message_id = 3
 end
+
+MessageListResponseCandidate.seed do |mr|
+  mr.id = 16
+  mr.message_list_id = 1
+  mr.response_candidate_id = 1
+  mr.dependence_point = 2
+  mr.spirit_point = 2
+  mr.next_message_id = 3
+end
+
+MessageListResponseCandidate.seed do |mr|
+  mr.id = 17
+  mr.message_list_id = 1
+  mr.response_candidate_id = 2
+  mr.dependence_point = 2
+  mr.spirit_point = 2
+  mr.next_message_id = 2
+end
+
+MessageListResponseCandidate.seed do |mr|
+  mr.id = 18
+  mr.message_list_id = 1
+  mr.response_candidate_id = 3
+  mr.dependence_point = -5
+  mr.spirit_point = -5
+  mr.next_message_id = 3
+end

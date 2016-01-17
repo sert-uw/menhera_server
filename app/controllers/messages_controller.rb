@@ -3,7 +3,11 @@ class MessagesController < BaseController
   before_action :set_user_girl, only: [:index, :create, :update]
 
   def index
-    @messages = MessageDecorator.decorate_collection(@user_girl.messages.where(from: Message::FROM[:girl], read: false).includes(:message_list))
+    if params[:all].present?
+      @messages = MessageDecorator.decorate_collection(@user_girl.messages.includes(:message_list))
+    else
+      @messages = MessageDecorator.decorate_collection(@user_girl.messages.where(from: Message::FROM[:girl], read: false).includes(:message_list))
+    end
   end
 
   def create
