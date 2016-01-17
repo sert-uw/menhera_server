@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   namespace :admin_tools do
     resources :tops, only: [:index]
-    resources :users, only: [:index]
+    resources :users, only: [:index, :destroy]
     resources :girls do
       resources :message_lists
       resources :response_candidates

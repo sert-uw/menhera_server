@@ -6,8 +6,7 @@
       <td>ユーザID</td>
       <td>ユーザ名</td>
       <td>UUID</td>
-      <td>デバイスタイプ</td>
-      <td>デバイストークン</td>
+      <th colspan="1"></th>
     </tr>
   </thead>
 
@@ -17,8 +16,7 @@
         <td><%= user.id %></td>
         <td><%= user.name %></td>
         <td><%= user.uuid %></td>
-        <td><%= user.device.device_type %></td>
-        <td><%= user.device.device_token %></td>
+        <td><%= link_to '削除', admin_tools_user_path(user), method: :delete, data: { confirm: '削除しますか?' } %></td>
       </tr>
     <% end %>
   </tbody>
